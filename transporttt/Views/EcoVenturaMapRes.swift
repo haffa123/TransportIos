@@ -22,7 +22,7 @@ struct EcoVenturaMapRes: UIViewRepresentable{
         return mapView
     }
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        print("DEBUG: Map state is \(mapState)")
+        print("DEBUG: Map states is \(mapState)")
         
         switch mapState {
         case .noInput:
