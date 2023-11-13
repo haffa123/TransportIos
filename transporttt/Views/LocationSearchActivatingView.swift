@@ -19,13 +19,14 @@ struct LocationSearchActivatingView: View {
                 .foregroundColor(Color(.darkGray))
             Spacer()
         }
-        .frame(width: UIScreen.main.bounds.width - 64,
+        .frame(width: UIScreen.main.bounds.width - 90,
                height: 50)
         .background(
         Rectangle()
             .fill(Color.white)
             .shadow(color: .black, radius: 6))
              .cornerRadius(25)
+             .shadow(color: .black, radius: 6)
     }
 }
 

@@ -22,7 +22,7 @@ class LocationManager: NSObject, ObservableObject {
 }
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else { return } // Fix the typo here
+        guard let location = locations.first else { return } 
         self.userLocation = location.coordinate
         locationManager.stopUpdatingLocation()
     

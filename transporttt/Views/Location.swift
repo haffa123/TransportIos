@@ -21,7 +21,8 @@ struct Location: View {
                     LocationSearchView( mapState: $mapState)
                 } else if mapState == .noInput  {
                     LocationSearchActivatingView()
-                        .padding(.top, 72)
+                        .padding(.top, 4)
+                        .padding(.trailing, -70)
                         .onTapGesture {
                             withAnimation(.spring()){
                                 mapState = .searchingForLocation
@@ -29,7 +30,9 @@ struct Location: View {
                         }
                 }
                 MapViewActionButton(mapState: $mapState)
-                    .padding(.leading)
+                   
+                  
+
                     .padding(.top, 4)
             }.navigationBarBackButtonHidden(true)
             
@@ -39,8 +42,7 @@ struct Location: View {
             }
         }
         .edgesIgnoringSafeArea(.bottom)
-        .onReceive(LocationManager.shared.$userLocation){
-            location in
+        .onReceive(LocationManager.shared.$userLocation){ location in
             if let location = location {
                 locationViewModel.userLocation = location
             }
