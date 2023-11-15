@@ -1,29 +1,5 @@
-import SwiftUI
+/*import SwiftUI
 import MapKit
-import CoreLocation
-
-class MyLocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    @Published var userLocation: CLLocationCoordinate2D?
-
-    private var locationManager = CLLocationManager()
-
-    override init() {
-        super.init()
-        self.locationManager.delegate = self
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first?.coordinate {
-            userLocation = location
-        }
-    }
-
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Location manager error: \(error.localizedDescription)")
-    }
-}
 
 struct Station: Identifiable {
     var id = UUID()
@@ -31,9 +7,7 @@ struct Station: Identifiable {
     var coordinate: CLLocationCoordinate2D
 }
 
-struct StationView: View {
-    @StateObject private var locationManager = LocationManager()
-
+struct StationsView: View {
     @State private var stations: [Station] = [
         Station(name: "Station A", coordinate: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)),
         Station(name: "Station B", coordinate: CLLocationCoordinate2D(latitude: 37.7742, longitude: -122.4324)),
@@ -44,7 +18,10 @@ struct StationView: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            Map(coordinateRegion: .constant(getMapRegion()), showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: stations) { station in
+            Map(coordinateRegion: .constant(MKCoordinateRegion(
+                center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
+                span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+            )), showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: stations) { station in
                 MapPin(coordinate: station.coordinate, tint: .blue)
             }
             .onTapGesture {
@@ -73,18 +50,10 @@ struct StationView: View {
             )
         }
     }
-
-    func getMapRegion() -> MKCoordinateRegion {
-        if let userLocation = locationManager.userLocation {
-            return MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
-        } else {
-            return MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
-        }
-    }
 }
 
-struct StationView_Previews: PreviewProvider {
+struct StationsView_Previews: PreviewProvider {
     static var previews: some View {
-        StationView()
+        StationsView()
     }
-}
+}*/

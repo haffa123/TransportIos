@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-
 struct Location: View {
     
     @State private var mapState = MapViewState.noInput
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
+    //let locationManager = MyLocationManager.shared
     var body: some View {
         ZStack(alignment: .bottom){
             ZStack(alignment: .top) {

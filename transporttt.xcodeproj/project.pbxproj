@@ -43,7 +43,7 @@
 		12C25D8C2B0454D90098C3C9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 12C25D8B2B0454D90098C3C9 /* FirebaseFirestore */; };
 		12C25D8E2B0454D90098C3C9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 12C25D8D2B0454D90098C3C9 /* FirebaseFirestoreSwift */; };
 		12C25D902B0459EF0098C3C9 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D8F2B0459EF0098C3C9 /* ChatView.swift */; };
-		12C25D922B046CA40098C3C9 /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D912B046CA40098C3C9 /* StationView.swift */; };
+		12C25D922B046CA40098C3C9 /* StationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D912B046CA40098C3C9 /* StationsView.swift */; };
 		12EEC0392AFA9F4000D3CA2D /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EEC0382AFA9F4000D3CA2D /* LocationSearchView.swift */; };
 		12EEC03B2AFAA99D00D3CA2D /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EEC03A2AFAA99D00D3CA2D /* LocationSearchResultCell.swift */; };
 		12EEC03D2AFB03A900D3CA2D /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EEC03C2AFB03A900D3CA2D /* LocationSearchViewModel.swift */; };
@@ -104,7 +104,7 @@
 		12C25D862B044A2D0098C3C9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		12C25D882B0450ED0098C3C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12C25D8F2B0459EF0098C3C9 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		12C25D912B046CA40098C3C9 /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
+		12C25D912B046CA40098C3C9 /* StationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsView.swift; sourceTree = "<group>"; };
 		12EEC0382AFA9F4000D3CA2D /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		12EEC03A2AFAA99D00D3CA2D /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 		12EEC03C2AFB03A900D3CA2D /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 				12C25D792B042F320098C3C9 /* DriverDetailsView.swift */,
 				12C25D842B044A100098C3C9 /* ContentChatView.swift */,
 				12C25D8F2B0459EF0098C3C9 /* ChatView.swift */,
-				12C25D912B046CA40098C3C9 /* StationView.swift */,
+				12C25D912B046CA40098C3C9 /* StationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -419,7 +419,7 @@
 				12A82D292AF6688F007DF8CC /* transporttt.xcdatamodeld in Sources */,
 				12EEC03B2AFAA99D00D3CA2D /* LocationSearchResultCell.swift in Sources */,
 				12A82D1F2AF6688E007DF8CC /* ContentView.swift in Sources */,
-				12C25D922B046CA40098C3C9 /* StationView.swift in Sources */,
+				12C25D922B046CA40098C3C9 /* StationsView.swift in Sources */,
 				12C1CF992AF9B8F3001F66DA /* LocationSearchActivatingView.swift in Sources */,
 				124DF4472B0024B200FF7C81 /* RideRequestView.swift in Sources */,
 				12C25D702B03DBDE0098C3C9 /* TaxiLocation.swift in Sources */,

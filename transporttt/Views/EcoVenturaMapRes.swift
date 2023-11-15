@@ -10,7 +10,7 @@ import MapKit
 
 struct EcoVenturaMapRes: UIViewRepresentable{
     let mapView = MKMapView()
-    //let locationManager = LocationManager.shared
+    //let locationManager = MyLocationManager.shared
     @Binding var mapState: MapViewState
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
     
