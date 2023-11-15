@@ -34,7 +34,7 @@ enum RideType: Int, CaseIterable, Identifiable{
     }
     var baseFare: Double{
         switch self {
-        case .Ecar: return 100
+        case .Ecar: return 10
         case .Taxi: return 20
         case .Ebike: return 5
         case .Bus: return 7

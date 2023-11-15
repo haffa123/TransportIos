@@ -10,7 +10,7 @@ import MapKit
 
 struct EcoVenturaMapRes: UIViewRepresentable{
     let mapView = MKMapView()
-    let locationManager = LocationManager.shared
+    //let locationManager = LocationManager.shared
     @Binding var mapState: MapViewState
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
     
@@ -22,7 +22,6 @@ struct EcoVenturaMapRes: UIViewRepresentable{
         return mapView
     }
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        print("DEBUG: Map states is \(mapState)")
         
         switch mapState {
         case .noInput:
@@ -31,11 +30,13 @@ struct EcoVenturaMapRes: UIViewRepresentable{
         case .searchingForLocation:
             break
         case .locationSelected:
-            if let coordinate = locationViewModel.selectedLocationCoordinate{
+            if let coordinate = locationViewModel.selectedTaxiLocation?.coordinate{
                 context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
-        }
-        break
+            }
+            break
+        case.polylineAdded:
+            break
         }
     }
     func makeCoordinator() -> MapCoordinator {
@@ -79,40 +80,24 @@ extension EcoVenturaMapRes {
         }
         func configurePolyline(withDestinationCoordinate coordinate: CLLocationCoordinate2D){
             guard let userLocationCoordinate = self.userLocationCoordinate else { return }
-            getDestinationRoute(from: userLocationCoordinate, to: coordinate) {route in
+            
+            parent.locationViewModel.getDestinationRoute(from: userLocationCoordinate, to: coordinate) {route in
                 self.parent.mapView.addOverlay(route.polyline)
+                self.parent.mapState = .polylineAdded
                 let rect = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
-                                                             edgePadding: .init(top: 64, left: 32, bottom: 500, right: 32))
+                                                               edgePadding: .init(top: 64, left: 32, bottom: 500, right: 32))
                 self.parent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
             }
         }
-        func getDestinationRoute(from userLocation: CLLocationCoordinate2D,
-                                 
-                                 to destination: CLLocationCoordinate2D, completion:
-                                 @escaping(MKRoute) -> Void ){
-            let userPlacemark = MKPlacemark (coordinate: userLocation)
-            let destPlacemark = MKPlacemark(coordinate: destination)
-            let request = MKDirections.Request()
-            request.source = MKMapItem(placemark: userPlacemark)
-            request.destination = MKMapItem(placemark: destPlacemark)
-            let directions = MKDirections(request: request)
             
-            directions.calculate {response, error in
-                if let error = error {
-                    print("DEBUG: Failed to get directions with error \(error.localizedDescription)")
-                    return
-                }
-                guard let route = response?.routes.first else {return}
-                completion(route)
+            func clearMapViewAndRecenterOnUserLocation() {
+                parent.mapView.removeAnnotations(parent.mapView.annotations)
+                parent.mapView.removeOverlays(parent.mapView.overlays)
+                
+                if let currentRegion = currentRegion{
+                    parent.mapView.setRegion(currentRegion, animated: true)            }
             }
         }
-        func clearMapViewAndRecenterOnUserLocation() {
-            parent.mapView.removeAnnotations(parent.mapView.annotations)
-            parent.mapView.removeOverlays(parent.mapView.overlays)
-            
-            if let currentRegion = currentRegion{
-                parent.mapView.setRegion(currentRegion, animated: true)            }
-        }
+        
     }
-    
-}
+

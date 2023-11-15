@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RideRequestView: View {
     @State private var selectedRideType: RideType = .Ecar
+    @State private var showDriverList :Bool=false
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
     var body: some View {
         VStack{
@@ -37,21 +38,23 @@ struct RideRequestView: View {
                             .font(.system(size: 16, weight: .semibold))
                         
                         Spacer()
-                        Text("2:30 PM")
+                        Text(locationViewModel.pickupTime ?? "")
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(.gray)
                     }
                     .padding(.bottom, 10)
                     
                     HStack{
-                        Text("Canada")
-                            .font(.system(size: 16, weight: .semibold))
-                        
+                        if let locaton = locationViewModel.selectedTaxiLocation{
+                            Text(locaton.title)
+                                .font(.system(size: 16, weight: .semibold))
+                            
+                        }
                         
                         Spacer()
-                        Text("2:55 PM")
+                        Text(locationViewModel.dropOfTime ?? "")
                             .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(.gray)
+                            .foregroundColor(.gray)
                         
                     }
                 }
@@ -70,7 +73,7 @@ struct RideRequestView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             ScrollView(.horizontal){
-                HStack(spacing: 12){
+                HStack(spacing: 10){
                     ForEach(RideType.allCases){ type in
                         VStack(alignment: .leading){
                             Image(type.imageName)
@@ -81,7 +84,7 @@ struct RideRequestView: View {
                                 Text(type.description)
                                     .font(.system(size: 14, weight: .semibold))
                                 
-                                Text("DT\(locationViewModel.computeRidePrice(forType: type))")
+                                Text(locationViewModel.computeRidePrice(forType: type).toCurrency())
                                     .font(.system(size: 14, weight: .semibold))
                             }
                             .padding()
@@ -89,7 +92,7 @@ struct RideRequestView: View {
                         .frame(width: 112, height: 140)
                         .foregroundColor(type == selectedRideType ? .white : .black)
                         .background(Color(type == selectedRideType ? .systemBlue : .systemGroupedBackground))
-                        .scaleEffect(type == selectedRideType ? 1.15 : 1.0)
+                        .scaleEffect(type == selectedRideType ? 1.0 : 0.95)
                         .cornerRadius(10)
                         .onTapGesture {
                             withAnimation(.spring()){
@@ -130,8 +133,10 @@ struct RideRequestView: View {
             .padding(.horizontal)
             //request ride button
             Button{
+                showDriverList.toggle()
                 
             }label: {
+                
                 Text("CONFIRM RIDE")
                     .fontWeight(.bold)
                     .frame(width: UIScreen.main.bounds.width - 32, height: 50)
@@ -144,11 +149,13 @@ struct RideRequestView: View {
         .padding(.bottom, 24)
         .background(.white)
         .cornerRadius(16)
-
-        
+        .sheet(isPresented: $showDriverList) {
+            DriverListView(drivers: [
+                DriverModel(id: 1, name: "haffa", location: "location 1", imageName: "driver_profile_image", description: "Driver description", reviews: "5", rideType: .Taxi)
+            ])
+        }
     }
 }
-
 struct RideRequestView_Previews: PreviewProvider {
     static var previews: some View {
         RideRequestView()

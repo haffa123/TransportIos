@@ -26,6 +26,24 @@
 		12B728F82AF71D4B00E5A392 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B728F72AF71D4B00E5A392 /* Location.swift */; };
 		12C1CF992AF9B8F3001F66DA /* LocationSearchActivatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1CF982AF9B8F3001F66DA /* LocationSearchActivatingView.swift */; };
 		12C1CF9B2AF9BDDA001F66DA /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1CF9A2AF9BDDA001F66DA /* MapViewActionButton.swift */; };
+		12C25D6E2B03D3360098C3C9 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D6D2B03D3360098C3C9 /* Double.swift */; };
+		12C25D702B03DBDE0098C3C9 /* TaxiLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D6F2B03DBDE0098C3C9 /* TaxiLocation.swift */; };
+		12C25D722B03E5CC0098C3C9 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D712B03E5CC0098C3C9 /* RatingView.swift */; };
+		12C25D742B041D4E0098C3C9 /* DriverResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D732B041D4E0098C3C9 /* DriverResultCell.swift */; };
+		12C25D762B041D6A0098C3C9 /* DriverListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D752B041D6A0098C3C9 /* DriverListView.swift */; };
+		12C25D782B042E910098C3C9 /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D772B042E910098C3C9 /* DriverModel.swift */; };
+		12C25D7A2B042F320098C3C9 /* DriverDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D792B042F320098C3C9 /* DriverDetailsView.swift */; };
+		12C25D7D2B0449B90098C3C9 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D7C2B0449B90098C3C9 /* MessageBubble.swift */; };
+		12C25D7F2B0449CF0098C3C9 /* MessageField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D7E2B0449CF0098C3C9 /* MessageField.swift */; };
+		12C25D812B0449DE0098C3C9 /* TitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D802B0449DE0098C3C9 /* TitleRow.swift */; };
+		12C25D832B0449F50098C3C9 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D822B0449F50098C3C9 /* MessagesManager.swift */; };
+		12C25D852B044A100098C3C9 /* ContentChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D842B044A100098C3C9 /* ContentChatView.swift */; };
+		12C25D872B044A2D0098C3C9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D862B044A2D0098C3C9 /* Message.swift */; };
+		12C25D892B0450ED0098C3C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12C25D882B0450ED0098C3C9 /* GoogleService-Info.plist */; };
+		12C25D8C2B0454D90098C3C9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 12C25D8B2B0454D90098C3C9 /* FirebaseFirestore */; };
+		12C25D8E2B0454D90098C3C9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 12C25D8D2B0454D90098C3C9 /* FirebaseFirestoreSwift */; };
+		12C25D902B0459EF0098C3C9 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D8F2B0459EF0098C3C9 /* ChatView.swift */; };
+		12C25D922B046CA40098C3C9 /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C25D912B046CA40098C3C9 /* StationView.swift */; };
 		12EEC0392AFA9F4000D3CA2D /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EEC0382AFA9F4000D3CA2D /* LocationSearchView.swift */; };
 		12EEC03B2AFAA99D00D3CA2D /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EEC03A2AFAA99D00D3CA2D /* LocationSearchResultCell.swift */; };
 		12EEC03D2AFB03A900D3CA2D /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EEC03C2AFB03A900D3CA2D /* LocationSearchViewModel.swift */; };
@@ -71,6 +89,22 @@
 		12B728F72AF71D4B00E5A392 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		12C1CF982AF9B8F3001F66DA /* LocationSearchActivatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchActivatingView.swift; sourceTree = "<group>"; };
 		12C1CF9A2AF9BDDA001F66DA /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
+		12C25D6D2B03D3360098C3C9 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		12C25D6F2B03DBDE0098C3C9 /* TaxiLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiLocation.swift; sourceTree = "<group>"; };
+		12C25D712B03E5CC0098C3C9 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		12C25D732B041D4E0098C3C9 /* DriverResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverResultCell.swift; sourceTree = "<group>"; };
+		12C25D752B041D6A0098C3C9 /* DriverListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListView.swift; sourceTree = "<group>"; };
+		12C25D772B042E910098C3C9 /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
+		12C25D792B042F320098C3C9 /* DriverDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsView.swift; sourceTree = "<group>"; };
+		12C25D7C2B0449B90098C3C9 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		12C25D7E2B0449CF0098C3C9 /* MessageField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageField.swift; sourceTree = "<group>"; };
+		12C25D802B0449DE0098C3C9 /* TitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleRow.swift; sourceTree = "<group>"; };
+		12C25D822B0449F50098C3C9 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
+		12C25D842B044A100098C3C9 /* ContentChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChatView.swift; sourceTree = "<group>"; };
+		12C25D862B044A2D0098C3C9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		12C25D882B0450ED0098C3C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		12C25D8F2B0459EF0098C3C9 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		12C25D912B046CA40098C3C9 /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
 		12EEC0382AFA9F4000D3CA2D /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		12EEC03A2AFAA99D00D3CA2D /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 		12EEC03C2AFB03A900D3CA2D /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
@@ -81,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12C25D8C2B0454D90098C3C9 /* FirebaseFirestore in Frameworks */,
+				12C25D8E2B0454D90098C3C9 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +142,9 @@
 			children = (
 				124DF4442B00012D00FF7C81 /* MapViewState.swift */,
 				124DF4482B0052EA00FF7C81 /* RideType.swift */,
+				12C25D6F2B03DBDE0098C3C9 /* TaxiLocation.swift */,
+				12C25D772B042E910098C3C9 /* DriverModel.swift */,
+				12C25D862B044A2D0098C3C9 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +172,8 @@
 		12A82D1B2AF6688E007DF8CC /* transporttt */ = {
 			isa = PBXGroup;
 			children = (
+				12C25D882B0450ED0098C3C9 /* GoogleService-Info.plist */,
+				12C25D6C2B03D19E0098C3C9 /* Extensions */,
 				12B57E6F2AF820FF004320C6 /* ViewModel */,
 				12B57E702AF8210C004320C6 /* Views */,
 				124DF4412AFFF54600FF7C81 /* Models */,
@@ -183,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				12EEC03C2AFB03A900D3CA2D /* LocationSearchViewModel.swift */,
+				12C25D822B0449F50098C3C9 /* MessagesManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,6 +232,7 @@
 		12B57E702AF8210C004320C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12C25D7B2B0449820098C3C9 /* Components */,
 				12A82D1E2AF6688E007DF8CC /* ContentView.swift */,
 				12B57E672AF7F47C004320C6 /* EcoVenturaMapRes.swift */,
 				12C1CF9A2AF9BDDA001F66DA /* MapViewActionButton.swift */,
@@ -200,8 +243,33 @@
 				12EEC03A2AFAA99D00D3CA2D /* LocationSearchResultCell.swift */,
 				12B728F72AF71D4B00E5A392 /* Location.swift */,
 				124DF4462B0024B200FF7C81 /* RideRequestView.swift */,
+				12C25D712B03E5CC0098C3C9 /* RatingView.swift */,
+				12C25D732B041D4E0098C3C9 /* DriverResultCell.swift */,
+				12C25D752B041D6A0098C3C9 /* DriverListView.swift */,
+				12C25D792B042F320098C3C9 /* DriverDetailsView.swift */,
+				12C25D842B044A100098C3C9 /* ContentChatView.swift */,
+				12C25D8F2B0459EF0098C3C9 /* ChatView.swift */,
+				12C25D912B046CA40098C3C9 /* StationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		12C25D6C2B03D19E0098C3C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12C25D6D2B03D3360098C3C9 /* Double.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		12C25D7B2B0449820098C3C9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				12C25D7C2B0449B90098C3C9 /* MessageBubble.swift */,
+				12C25D7E2B0449CF0098C3C9 /* MessageField.swift */,
+				12C25D802B0449DE0098C3C9 /* TitleRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +288,10 @@
 			dependencies = (
 			);
 			name = transporttt;
+			packageProductDependencies = (
+				12C25D8B2B0454D90098C3C9 /* FirebaseFirestore */,
+				12C25D8D2B0454D90098C3C9 /* FirebaseFirestoreSwift */,
+			);
 			productName = transporttt;
 			productReference = 12A82D192AF6688E007DF8CC /* transporttt.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +364,9 @@
 				Base,
 			);
 			mainGroup = 12A82D102AF6688E007DF8CC;
+			packageReferences = (
+				12C25D8A2B0454D90098C3C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 12A82D1A2AF6688E007DF8CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,6 +385,7 @@
 			files = (
 				12A82D242AF6688F007DF8CC /* Preview Assets.xcassets in Resources */,
 				12A82D212AF6688F007DF8CC /* Assets.xcassets in Resources */,
+				12C25D892B0450ED0098C3C9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,21 +412,36 @@
 			files = (
 				12B728F42AF6DCCF00E5A392 /* Driver.swift in Sources */,
 				12EEC0392AFA9F4000D3CA2D /* LocationSearchView.swift in Sources */,
+				12C25D7D2B0449B90098C3C9 /* MessageBubble.swift in Sources */,
 				12A82D262AF6688F007DF8CC /* Persistence.swift in Sources */,
+				12C25D722B03E5CC0098C3C9 /* RatingView.swift in Sources */,
 				12B728F62AF6EED100E5A392 /* TrackYourRide.swift in Sources */,
 				12A82D292AF6688F007DF8CC /* transporttt.xcdatamodeld in Sources */,
 				12EEC03B2AFAA99D00D3CA2D /* LocationSearchResultCell.swift in Sources */,
 				12A82D1F2AF6688E007DF8CC /* ContentView.swift in Sources */,
+				12C25D922B046CA40098C3C9 /* StationView.swift in Sources */,
 				12C1CF992AF9B8F3001F66DA /* LocationSearchActivatingView.swift in Sources */,
 				124DF4472B0024B200FF7C81 /* RideRequestView.swift in Sources */,
+				12C25D702B03DBDE0098C3C9 /* TaxiLocation.swift in Sources */,
 				12C1CF9B2AF9BDDA001F66DA /* MapViewActionButton.swift in Sources */,
+				12C25D782B042E910098C3C9 /* DriverModel.swift in Sources */,
+				12C25D7F2B0449CF0098C3C9 /* MessageField.swift in Sources */,
 				124DF4452B00012D00FF7C81 /* MapViewState.swift in Sources */,
 				12B57E682AF7F47C004320C6 /* EcoVenturaMapRes.swift in Sources */,
+				12C25D7A2B042F320098C3C9 /* DriverDetailsView.swift in Sources */,
 				12A82D1D2AF6688E007DF8CC /* transportttApp.swift in Sources */,
 				12EEC03D2AFB03A900D3CA2D /* LocationSearchViewModel.swift in Sources */,
+				12C25D902B0459EF0098C3C9 /* ChatView.swift in Sources */,
+				12C25D762B041D6A0098C3C9 /* DriverListView.swift in Sources */,
 				12B728F82AF71D4B00E5A392 /* Location.swift in Sources */,
 				124DF4492B0052EA00FF7C81 /* RideType.swift in Sources */,
+				12C25D6E2B03D3360098C3C9 /* Double.swift in Sources */,
 				12B57E6B2AF80103004320C6 /* LocationManager.swift in Sources */,
+				12C25D742B041D4E0098C3C9 /* DriverResultCell.swift in Sources */,
+				12C25D852B044A100098C3C9 /* ContentChatView.swift in Sources */,
+				12C25D872B044A2D0098C3C9 /* Message.swift in Sources */,
+				12C25D812B0449DE0098C3C9 /* TitleRow.swift in Sources */,
+				12C25D832B0449F50098C3C9 /* MessagesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +762,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		12C25D8A2B0454D90098C3C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		12C25D8B2B0454D90098C3C9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12C25D8A2B0454D90098C3C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		12C25D8D2B0454D90098C3C9 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12C25D8A2B0454D90098C3C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		12A82D272AF6688F007DF8CC /* transporttt.xcdatamodeld */ = {

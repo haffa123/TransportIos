@@ -10,7 +10,7 @@ struct TrackYourRide: View {
             
             VStack {
                 Spacer()
-                Image("Driver")
+                Image("trackYourRide")
                     .resizable()
                     .clipShape(Circle())
                     .aspectRatio(contentMode: .fill)
