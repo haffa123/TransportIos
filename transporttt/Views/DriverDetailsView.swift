@@ -18,12 +18,10 @@ struct DriverDetailsView: View {
             ZStack {
                 VStack(alignment: .leading, spacing: 20) {
                     Spacer()
-                    Image("driver_image") // Replace with the actual image name or URL
+                    Image("driver_profile_image") // Replace with the actual image name or URL
                         .resizable()
-                        .cornerRadius(32)
-                        .aspectRatio(contentMode: .fill)
-                        .frame(height: 200)
-                        .padding(.top, 20)
+                        .frame(height: 250)
+                        
                   
                     HStack {
                         Text(driverInfo.name)
@@ -47,7 +45,7 @@ struct DriverDetailsView: View {
                                 Text(" Rate Driver")
                                     .font(.headline)
                                     .foregroundColor(.blue)
-                                    .padding(.top, 16)
+                                    .padding(.top, 20)
                             
                             }
                             
@@ -78,14 +76,18 @@ struct DriverDetailsView: View {
                         Spacer()
 
                     HStack {
-                        Button("Chat") {
+                        Button(action: {
                             // Action to start a chat
                             isChatViewPresented.toggle()
+                        }) {
+                            Image(systemName: "message.circle.fill") // Use the appropriate SF Symbol for a chat bubble
+                                .font(.title)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
                         }
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(15)
+
 
                         Spacer()
                         
@@ -108,7 +110,11 @@ struct DriverDetailsView: View {
             .padding(.horizontal, 16)
             .padding(.top, -10)
             .navigationBarTitle("driver info", displayMode: .inline)
-            .navigationBarBackButtonHidden(true)
+            .navigationBarBackButtonHidden()
+            .onAppear {
+                            // Customize navigation bar appearance here
+                            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.black]
+                        }
           
         }
     }

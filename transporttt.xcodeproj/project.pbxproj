@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124B10622B059F2700B75035 /* PaimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124B10612B059F2700B75035 /* PaimentView.swift */; };
 		124DF4452B00012D00FF7C81 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DF4442B00012D00FF7C81 /* MapViewState.swift */; };
 		124DF4472B0024B200FF7C81 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DF4462B0024B200FF7C81 /* RideRequestView.swift */; };
 		124DF4492B0052EA00FF7C81 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DF4482B0052EA00FF7C81 /* RideType.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		124B10612B059F2700B75035 /* PaimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaimentView.swift; sourceTree = "<group>"; };
 		124DF4442B00012D00FF7C81 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		124DF4462B0024B200FF7C81 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		124DF4482B0052EA00FF7C81 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				12C25D842B044A100098C3C9 /* ContentChatView.swift */,
 				12C25D8F2B0459EF0098C3C9 /* ChatView.swift */,
 				12C25D912B046CA40098C3C9 /* StationsView.swift */,
+				124B10612B059F2700B75035 /* PaimentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				12C25D7A2B042F320098C3C9 /* DriverDetailsView.swift in Sources */,
 				12A82D1D2AF6688E007DF8CC /* transportttApp.swift in Sources */,
 				12EEC03D2AFB03A900D3CA2D /* LocationSearchViewModel.swift in Sources */,
+				124B10622B059F2700B75035 /* PaimentView.swift in Sources */,
 				12C25D902B0459EF0098C3C9 /* ChatView.swift in Sources */,
 				12C25D762B041D6A0098C3C9 /* DriverListView.swift in Sources */,
 				12B728F82AF71D4B00E5A392 /* Location.swift in Sources */,
