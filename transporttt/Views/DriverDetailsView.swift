@@ -97,10 +97,7 @@ struct DriverDetailsView: View {
                             .sheet(isPresented: $isChatViewPresented) {
                                                         ContentChatView()
                                                     }
-                        Image(systemName: "heart")
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                            .foregroundColor(Color.gray)
+                       
                     }
                 }
                 .padding(.horizontal, 15)
@@ -127,7 +124,7 @@ struct DriverDetailsView_Previews: PreviewProvider {
             name: "Driver Driver",
             location: "Tunis, Tunisie",
             imageName: "driver_image",
-            description: "Passionate and dedicated taxi driver with a commitment to providing safe and comfortable rides. Known for excellent navigation skills, courteous service, and a friendly demeanor. Always prioritizing passenger satisfaction. ",
+            description: "Passionate and dedicated taxi driver with a commitment to providing safe and comfortable rides. Known for excellent navigation skills, courteous service ",
             reviews: "5",
             rideType: .Taxi
         ))

@@ -11,6 +11,10 @@
 		124DF4452B00012D00FF7C81 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DF4442B00012D00FF7C81 /* MapViewState.swift */; };
 		124DF4472B0024B200FF7C81 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DF4462B0024B200FF7C81 /* RideRequestView.swift */; };
 		124DF4492B0052EA00FF7C81 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DF4482B0052EA00FF7C81 /* RideType.swift */; };
+		1276E09D2B05F43000A29B5A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1276E09C2B05F43000A29B5A /* Network.swift */; };
+		1276E09F2B05F47600A29B5A /* StationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1276E09E2B05F47600A29B5A /* StationService.swift */; };
+		1276E0A12B05F56000A29B5A /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1276E0A02B05F56000A29B5A /* StationViewModel.swift */; };
+		1276E0A42B05F6A900A29B5A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1276E0A32B05F6A900A29B5A /* Alamofire */; };
 		12A82D1D2AF6688E007DF8CC /* transportttApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A82D1C2AF6688E007DF8CC /* transportttApp.swift */; };
 		12A82D1F2AF6688E007DF8CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A82D1E2AF6688E007DF8CC /* ContentView.swift */; };
 		12A82D212AF6688F007DF8CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12A82D202AF6688F007DF8CC /* Assets.xcassets */; };
@@ -72,6 +76,9 @@
 		124DF4442B00012D00FF7C81 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		124DF4462B0024B200FF7C81 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		124DF4482B0052EA00FF7C81 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
+		1276E09C2B05F43000A29B5A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		1276E09E2B05F47600A29B5A /* StationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationService.swift; sourceTree = "<group>"; };
+		1276E0A02B05F56000A29B5A /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		12A82D192AF6688E007DF8CC /* transporttt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = transporttt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A82D1C2AF6688E007DF8CC /* transportttApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transportttApp.swift; sourceTree = "<group>"; };
 		12A82D1E2AF6688E007DF8CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1276E0A42B05F6A900A29B5A /* Alamofire in Frameworks */,
 				12C25D8C2B0454D90098C3C9 /* FirebaseFirestore in Frameworks */,
 				12C25D8E2B0454D90098C3C9 /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -151,6 +159,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		1276E09B2B05F42000A29B5A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1276E09C2B05F43000A29B5A /* Network.swift */,
+				1276E09E2B05F47600A29B5A /* StationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		12A82D102AF6688E007DF8CC = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +191,7 @@
 		12A82D1B2AF6688E007DF8CC /* transporttt */ = {
 			isa = PBXGroup;
 			children = (
+				1276E09B2B05F42000A29B5A /* Services */,
 				12C25D882B0450ED0098C3C9 /* GoogleService-Info.plist */,
 				12C25D6C2B03D19E0098C3C9 /* Extensions */,
 				12B57E6F2AF820FF004320C6 /* ViewModel */,
@@ -227,6 +245,7 @@
 			children = (
 				12EEC03C2AFB03A900D3CA2D /* LocationSearchViewModel.swift */,
 				12C25D822B0449F50098C3C9 /* MessagesManager.swift */,
+				1276E0A02B05F56000A29B5A /* StationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -294,6 +313,7 @@
 			packageProductDependencies = (
 				12C25D8B2B0454D90098C3C9 /* FirebaseFirestore */,
 				12C25D8D2B0454D90098C3C9 /* FirebaseFirestoreSwift */,
+				1276E0A32B05F6A900A29B5A /* Alamofire */,
 			);
 			productName = transporttt;
 			productReference = 12A82D192AF6688E007DF8CC /* transporttt.app */;
@@ -369,6 +389,7 @@
 			mainGroup = 12A82D102AF6688E007DF8CC;
 			packageReferences = (
 				12C25D8A2B0454D90098C3C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1276E0A22B05F6A800A29B5A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 12A82D1A2AF6688E007DF8CC /* Products */;
 			projectDirPath = "";
@@ -421,8 +442,10 @@
 				12B728F62AF6EED100E5A392 /* TrackYourRide.swift in Sources */,
 				12A82D292AF6688F007DF8CC /* transporttt.xcdatamodeld in Sources */,
 				12EEC03B2AFAA99D00D3CA2D /* LocationSearchResultCell.swift in Sources */,
+				1276E09F2B05F47600A29B5A /* StationService.swift in Sources */,
 				12A82D1F2AF6688E007DF8CC /* ContentView.swift in Sources */,
 				12C25D922B046CA40098C3C9 /* StationsView.swift in Sources */,
+				1276E09D2B05F43000A29B5A /* Network.swift in Sources */,
 				12C1CF992AF9B8F3001F66DA /* LocationSearchActivatingView.swift in Sources */,
 				124DF4472B0024B200FF7C81 /* RideRequestView.swift in Sources */,
 				12C25D702B03DBDE0098C3C9 /* TaxiLocation.swift in Sources */,
@@ -438,6 +461,7 @@
 				12C25D902B0459EF0098C3C9 /* ChatView.swift in Sources */,
 				12C25D762B041D6A0098C3C9 /* DriverListView.swift in Sources */,
 				12B728F82AF71D4B00E5A392 /* Location.swift in Sources */,
+				1276E0A12B05F56000A29B5A /* StationViewModel.swift in Sources */,
 				124DF4492B0052EA00FF7C81 /* RideType.swift in Sources */,
 				12C25D6E2B03D3360098C3C9 /* Double.swift in Sources */,
 				12B57E6B2AF80103004320C6 /* LocationManager.swift in Sources */,
@@ -768,6 +792,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1276E0A22B05F6A800A29B5A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		12C25D8A2B0454D90098C3C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -779,6 +811,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1276E0A32B05F6A900A29B5A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1276E0A22B05F6A800A29B5A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		12C25D8B2B0454D90098C3C9 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 12C25D8A2B0454D90098C3C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -7,10 +7,10 @@
 import SwiftUI
 
 
-struct SelectCardsView: View {
+struct PaimentView: View {
    // @Binding var user: User
-    @Binding var selectedPhoneNumber: String
-    @Binding var discountCode: Double
+    //@Binding var selectedPhoneNumber: String
+    //@Binding var discountCode: Double
     
     var body: some View {
         VStack(alignment : .leading,spacing:20){

@@ -18,9 +18,11 @@ struct transportttApp: App {
     }
     var body: some Scene {
         WindowGroup {
-        ContentView()
+            ContentView()
                 .environmentObject(locationViewModel)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
+//        StationsView( stationViewModel: StationViewModel())
+

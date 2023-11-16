@@ -137,7 +137,7 @@ struct RideRequestView: View {
                 
             }label: {
                 
-                Text("CONFIRM RIDE")
+                Text("CONFIRM")
                     .fontWeight(.bold)
                     .frame(width: UIScreen.main.bounds.width - 32, height: 50)
                     .background(.blue)
