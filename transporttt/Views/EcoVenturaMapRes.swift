@@ -31,6 +31,14 @@ struct EcoVenturaMapRes: UIViewRepresentable{
             break
         case .locationSelected:
             if let coordinate = locationViewModel.selectedTaxiLocation?.coordinate{
+                print("DAT²²²²²\(coordinate)")
+                context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
+                context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
+            }
+            break
+        case .busSelected:
+            if let coordinate = locationViewModel.selectedTaxiLocation?.coordinate{
+                print("DAT333\(coordinate)")
                 context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
@@ -73,6 +81,7 @@ extension EcoVenturaMapRes {
         }
         func addAndSelectAnnotation(withCoordinate coordinate: CLLocationCoordinate2D){
             parent.mapView.removeAnnotations(parent.mapView.annotations)
+            parent.mapView.removeOverlays(parent.mapView.overlays)
             let anno = MKPointAnnotation()
             anno.coordinate = coordinate
             parent.mapView.addAnnotation(anno)

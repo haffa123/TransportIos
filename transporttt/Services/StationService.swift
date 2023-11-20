@@ -5,8 +5,8 @@ import SwiftUI
 
 struct Stationservice {
     
-    func fetchStations(completion: @escaping(Result<fetchStationsResponse?, Error>) -> Void) {
-        AF.request("\(Network.fetchStationUrl)",
+    func fetchStation(fromLocation: Cordinates, toLocation: Cordinates, completion: @escaping(Result<fetchStationsResponse?, Error>) -> Void) {
+        AF.request("\(Network.fetchStationUrl)?fromLan=\(fromLocation.lan)&fromLat=\(fromLocation.lat)&toLan=\(toLocation.lan)&toLat=\(toLocation.lat)",
                    method: .get,
                    encoding: JSONEncoding.default)
         .validate(contentType: ["application/json"])

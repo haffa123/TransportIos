@@ -28,7 +28,7 @@ struct TripModel: Identifiable {
 }
 
 struct fetchStationsResponse : Decodable  {
-    let stations : [Station]
+    let fromStation: Station
     let message : String
     let statusCode : Int
 }
@@ -38,15 +38,19 @@ struct StationsView: View {
     @State private var selectedStation: Station?
     @StateObject var stationViewModel : StationViewModel
     @State private var mapState = MapViewState.noInput
+    let fromLocation: Cordinates
+    let toLocation: Cordinates
+    
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
             Map(coordinateRegion: .constant(MKCoordinateRegion(
                 center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
                 span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
             )), showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: stationViewModel.stations) { station in
-                MapPin(coordinate: CLLocationCoordinate2D(latitude:station.coordinates.lat , longitude: station.coordinates.lan), tint: .blue)
+                MapMarker(coordinate: CLLocationCoordinate2D(latitude:station.coordinates.lat , longitude: station.coordinates.lan), tint: .blue)
             }.onAppear {
-                stationViewModel.fetchStations()
+                stationViewModel.fetchStation(fromLocation: fromLocation ,toLocation: toLocation)
             }
             .onTapGesture {
                 // Handle taps on the map (not on markers) here
@@ -61,16 +65,11 @@ struct StationsView: View {
             .padding(.top, 4)
     }.navigationBarBackButtonHidden(false)
     
-    if mapState == .locationSelected || mapState == .polylineAdded {
+    /*if mapState == .locationSelected || mapState == .polylineAdded ||  {
         RideRequestView()
             .transition(.move(edge: .bottom))
-    }
+    }*/
 }
     }
 
 
-struct StationsView_Previews: PreviewProvider {
-    static var previews: some View {
-        StationsView(stationViewModel: StationViewModel())
-    }
-}

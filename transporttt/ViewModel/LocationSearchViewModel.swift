@@ -35,6 +35,9 @@ class LocationSearchViewModel: NSObject, ObservableObject {
             print("DEBUG: Location coordinates \(coordinate)")
         }
     }
+    func setLocation(location: TaxiLocation) {
+        self.selectedTaxiLocation = location
+    }
     func locationSearch(forLocalSearchCompletion localSearch: MKLocalSearchCompletion, completion: @escaping MKLocalSearch.CompletionHandler){
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = localSearch.title.appending(localSearch.subtitle)

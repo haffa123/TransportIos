@@ -37,7 +37,7 @@ struct Location: View {
             }.navigationBarBackButtonHidden(true)
             
             if mapState == .locationSelected || mapState == .polylineAdded {
-                RideRequestView()
+                RideRequestView(mapState: $mapState)
                     .transition(.move(edge: .bottom))
             }
         }

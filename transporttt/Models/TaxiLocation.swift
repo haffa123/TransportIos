@@ -8,6 +8,6 @@
 import CoreLocation
 
 struct TaxiLocation{
-    let title: String
-    let coordinate: CLLocationCoordinate2D
+    var title: String
+    var coordinate: CLLocationCoordinate2D
 }

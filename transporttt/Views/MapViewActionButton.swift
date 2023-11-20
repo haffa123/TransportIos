@@ -32,7 +32,7 @@ actionForState(mapState)
             print("DEBUG: No input")
         case .searchingForLocation:
             mapState = .noInput
-        case .locationSelected, .polylineAdded:
+        case .locationSelected, .polylineAdded, .busSelected:
             mapState = .noInput
             viewModel.selectedTaxiLocation = nil
         }
