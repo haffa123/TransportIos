@@ -37,6 +37,7 @@ struct StationsView: View {
 
     @State private var selectedStation: Station?
     @StateObject var stationViewModel : StationViewModel
+    @State private var mapState = MapViewState.noInput
     var body: some View {
         ZStack(alignment: .topLeading) {
             Map(coordinateRegion: .constant(MKCoordinateRegion(
@@ -52,9 +53,21 @@ struct StationsView: View {
             }
 
             
-        }
+        
+        //MapViewActionButton(mapState: $mapState)
+           
+          
+
+            .padding(.top, 4)
+    }.navigationBarBackButtonHidden(false)
+    
+    if mapState == .locationSelected || mapState == .polylineAdded {
+        RideRequestView()
+            .transition(.move(edge: .bottom))
     }
 }
+    }
+
 
 struct StationsView_Previews: PreviewProvider {
     static var previews: some View {

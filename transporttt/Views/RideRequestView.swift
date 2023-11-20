@@ -9,7 +9,9 @@ import SwiftUI
 
 struct RideRequestView: View {
     @State private var selectedRideType: RideType = .Ecar
-    @State private var showDriverList :Bool=false
+    @State private var showStationsView :Bool=false
+    //@State private var rideType: String = ""
+    @State private var showDriverListView :Bool=false
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
     var body: some View {
         VStack{
@@ -132,30 +134,45 @@ struct RideRequestView: View {
             .cornerRadius(10)
             .padding(.horizontal)
             //request ride button
-            Button{
-                showDriverList.toggle()
-                
-            }label: {
-                
-                Text("CONFIRM")
-                    .fontWeight(.bold)
-                    .frame(width: UIScreen.main.bounds.width - 32, height: 50)
-                    .background(.blue)
-                    .cornerRadius(10)
-                    .foregroundColor(.white)
-                
+            Button {
+                if selectedRideType == .Ebike || selectedRideType == .Bus {
+                    
+                    showStationsView.toggle()
+                }
+                else if
+                    selectedRideType == .Ecar || selectedRideType == .Taxi {
+                    
+                    showDriverListView.toggle()
+                        
+                   
+                }
             }
+        label: {
+            Text("CONFIRM")
+                .fontWeight(.bold)
+                .frame(width: UIScreen.main.bounds.width - 32, height: 50)
+                .background(.blue)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+        }
         }
         .padding(.bottom, 24)
         .background(.white)
         .cornerRadius(16)
-        .sheet(isPresented: $showDriverList) {
+        .sheet(isPresented: $showDriverListView) {
             DriverListView(drivers: [
                 DriverModel(id: 1, name: "haffa", location: "location 1", imageName: "driver_profile_image", description: "Driver description", reviews: "5", rideType: .Taxi)
             ])
         }
+        .sheet(isPresented: $showStationsView) {
+            StationsView(stationViewModel: StationViewModel())
+            
+            
+        }
+    
+        }
     }
-}
+
 struct RideRequestView_Previews: PreviewProvider {
     static var previews: some View {
         RideRequestView()
