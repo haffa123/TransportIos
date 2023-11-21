@@ -40,6 +40,17 @@ struct Location: View {
                 RideRequestView(mapState: $mapState)
                     .transition(.move(edge: .bottom))
             }
+            if mapState == .confirmed {
+                RideFollowView(mapState: $mapState)
+                    .transition(.move(edge: .bottom))
+            }
+            if mapState == .confirmedTaxi {
+                DriverListView(drivers: [
+                    DriverModel(id: 1, name: "haffa", location: "location 1", imageName: "driver_profile_image", description: "Driver description", reviews: "5", rideType: .Taxi)
+                ])
+                .transition(.move(edge: .bottom))
+
+            }
         }
         .edgesIgnoringSafeArea(.bottom)
         .onReceive(LocationManager.shared.$userLocation){ location in

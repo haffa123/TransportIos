@@ -22,7 +22,7 @@ actionForState(mapState)
                 .padding()
                 .background(.white)
                 .clipShape(Circle())
-                .shadow(color: .black, radius: 6)
+                .shadow(color: .blue, radius: 6)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -32,7 +32,7 @@ actionForState(mapState)
             print("DEBUG: No input")
         case .searchingForLocation:
             mapState = .noInput
-        case .locationSelected, .polylineAdded, .busSelected:
+        case .locationSelected, .polylineAdded, .busSelected, .confirmed, .confirmedTaxi:
             mapState = .noInput
             viewModel.selectedTaxiLocation = nil
         }

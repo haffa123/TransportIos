@@ -141,6 +141,7 @@ struct RideRequestView: View {
             .padding(.horizontal)
             //request ride button
             Button {
+                print("MAPSTATE: \(mapState)")
                 if selectedRideType == .Ebike || selectedRideType == .Bus {
                     let location = locationViewModel.selectedTaxiLocation ?? TaxiLocation(title: "INIT", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
                     locationViewModel.setSelectedLocation(location: location)
@@ -148,8 +149,9 @@ struct RideRequestView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
                         print("DATAA>>>>>>>>\(stationViewModel.fromStation)")
                         let location = TaxiLocation(title: stationViewModel.fromStation.title, coordinate: CLLocationCoordinate2D(latitude: stationViewModel.fromStation.coordinates.lat , longitude: stationViewModel.fromStation.coordinates.lan ))
-                        locationViewModel.setLocation(location: location)
-                        mapState = .busSelected
+                            locationViewModel.setLocation(location: location)
+                            mapState = .busSelected
+                            
                         })
                 }
                 else if
@@ -157,8 +159,13 @@ struct RideRequestView: View {
                     let location = locationViewModel.selectedLocation ?? locationViewModel.selectedTaxiLocation ?? TaxiLocation(title: "INIT", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0) )
                     locationViewModel.setLocation(location: location)
                     mapState = .locationSelected
-                    showDriverListView.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+                        showDriverListView.toggle()
+                    })
                 }
+                
+                print("MAPSTATE222: \(mapState)")
+
             }
         label: {
             Text("CONFIRM")
@@ -177,6 +184,9 @@ struct RideRequestView: View {
                 DriverModel(id: 1, name: "haffa", location: "location 1", imageName: "driver_profile_image", description: "Driver description", reviews: "5", rideType: .Taxi)
             ])
         }
+        /*.sheet(isPresented: $showDriverListView){
+            RideFollowView(stationViewModel: stationViewModel, mapState: $mapState)
+        }*/
         
     
         }

@@ -12,4 +12,6 @@ enum MapViewState {
     case locationSelected
     case busSelected
     case polylineAdded
+    case confirmed
+    case confirmedTaxi
 }

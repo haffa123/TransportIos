@@ -45,6 +45,8 @@ struct EcoVenturaMapRes: UIViewRepresentable{
             break
         case.polylineAdded:
             break
+        case .confirmed, .confirmedTaxi:
+            break
         }
     }
     func makeCoordinator() -> MapCoordinator {

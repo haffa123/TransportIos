@@ -15,7 +15,6 @@ struct RideFollowView: View {
     //@State private var rideType: String = ""
     @State private var showDriverListView :Bool=false
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
-    @State var selectedLocation : TaxiLocation = TaxiLocation(title: "INIT", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
     @StateObject var stationViewModel : StationViewModel = StationViewModel()
     @Binding var mapState : MapViewState
 
