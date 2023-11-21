@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122A393D2B0C2007007495AD /* RideFollowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A393C2B0C2007007495AD /* RideFollowView.swift */; };
 		124B10622B059F2700B75035 /* PaimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124B10612B059F2700B75035 /* PaimentView.swift */; };
 		124DF4452B00012D00FF7C81 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DF4442B00012D00FF7C81 /* MapViewState.swift */; };
 		124DF4472B0024B200FF7C81 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DF4462B0024B200FF7C81 /* RideRequestView.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		122A393C2B0C2007007495AD /* RideFollowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideFollowView.swift; sourceTree = "<group>"; };
 		124B10612B059F2700B75035 /* PaimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaimentView.swift; sourceTree = "<group>"; };
 		124DF4442B00012D00FF7C81 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		124DF4462B0024B200FF7C81 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				12C25D8F2B0459EF0098C3C9 /* ChatView.swift */,
 				12C25D912B046CA40098C3C9 /* StationsView.swift */,
 				124B10612B059F2700B75035 /* PaimentView.swift */,
+				122A393C2B0C2007007495AD /* RideFollowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				122A393D2B0C2007007495AD /* RideFollowView.swift in Sources */,
 				12B728F42AF6DCCF00E5A392 /* Driver.swift in Sources */,
 				12EEC0392AFA9F4000D3CA2D /* LocationSearchView.swift in Sources */,
 				12C25D7D2B0449B90098C3C9 /* MessageBubble.swift in Sources */,

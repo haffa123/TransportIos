@@ -48,7 +48,7 @@ struct StationsView: View {
                 center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
                 span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
             )), showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: stationViewModel.stations) { station in
-                MapMarker(coordinate: CLLocationCoordinate2D(latitude:station.coordinates.lat , longitude: station.coordinates.lan), tint: .blue)
+                MapMarker(coordinate: CLLocationCoordinate2D(latitude:station.coordinates.lat , longitude: station.coordinates.lan), tint:.blue)
             }.onAppear {
                 stationViewModel.fetchStation(fromLocation: fromLocation ,toLocation: toLocation)
             }

@@ -15,7 +15,6 @@ struct RideRequestView: View {
     //@State private var rideType: String = ""
     @State private var showDriverListView :Bool=false
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
-    @State var selectedLocation : TaxiLocation = TaxiLocation(title: "INIT", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
     @StateObject var stationViewModel : StationViewModel = StationViewModel()
     @Binding var mapState : MapViewState
 
@@ -49,6 +48,7 @@ struct RideRequestView: View {
                         Text(locationViewModel.pickupTime ?? "")
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(.gray)
+                        
                     }
                     .padding(.bottom, 10)
                     
@@ -56,7 +56,7 @@ struct RideRequestView: View {
                         if let locaton = locationViewModel.selectedTaxiLocation{
                             Text(locaton.title)
                                 .font(.system(size: 16, weight: .semibold))
-                            
+                                .foregroundColor(.blue)
                         }
                         
                         Spacer()
@@ -142,9 +142,8 @@ struct RideRequestView: View {
             //request ride button
             Button {
                 if selectedRideType == .Ebike || selectedRideType == .Bus {
-                    selectedLocation = locationViewModel.selectedTaxiLocation ?? TaxiLocation(title: "INIT", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
-                    print("DATAA||||||||\(selectedLocation)")
-                    Cordinates(lan: locationViewModel.selectedTaxiLocation?.coordinate.longitude ?? 0, lat: locationViewModel.selectedTaxiLocation?.coordinate.latitude ?? 0)
+                    let location = locationViewModel.selectedTaxiLocation ?? TaxiLocation(title: "INIT", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
+                    locationViewModel.setSelectedLocation(location: location)
                     stationViewModel.fetchStation(fromLocation: Cordinates(lan: locationViewModel.userLocation?.longitude ?? 0, lat: locationViewModel.userLocation?.latitude ?? 0), toLocation: Cordinates(lan: locationViewModel.selectedTaxiLocation?.coordinate.longitude ?? 0, lat: locationViewModel.selectedTaxiLocation?.coordinate.latitude ?? 0))
                     DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
                         print("DATAA>>>>>>>>\(stationViewModel.fromStation)")
@@ -152,18 +151,13 @@ struct RideRequestView: View {
                         locationViewModel.setLocation(location: location)
                         mapState = .busSelected
                         })
-                    
-                    
                 }
                 else if
                     selectedRideType == .Ecar || selectedRideType == .Taxi {
-                    let location = selectedLocation
-                    print("DATAA////////\(selectedLocation)")
+                    let location = locationViewModel.selectedLocation ?? locationViewModel.selectedTaxiLocation ?? TaxiLocation(title: "INIT", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0) )
                     locationViewModel.setLocation(location: location)
                     mapState = .locationSelected
                     showDriverListView.toggle()
-                        
-                   
                 }
             }
         label: {
@@ -183,6 +177,7 @@ struct RideRequestView: View {
                 DriverModel(id: 1, name: "haffa", location: "location 1", imageName: "driver_profile_image", description: "Driver description", reviews: "5", rideType: .Taxi)
             ])
         }
+        
     
         }
     }

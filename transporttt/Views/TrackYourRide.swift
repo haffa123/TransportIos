@@ -21,6 +21,7 @@ struct TrackYourRide: View {
                 Text("Track your ride")
                     .font(.system(size: 30, weight: .medium, design: .default))
                     .frame(width: 200, height: 100)
+                    .foregroundColor(Color.blue)
                 
                 Text("Huge drivers network helps you find comfortable,safe and cheap rode ")
                     .font(.system(size: 22, weight: .medium, design: .default))

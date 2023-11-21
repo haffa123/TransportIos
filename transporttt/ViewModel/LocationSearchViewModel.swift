@@ -5,6 +5,7 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     
     @Published var results = [MKLocalSearchCompletion]()
     @Published var selectedTaxiLocation: TaxiLocation?
+    @Published var selectedLocation : TaxiLocation?
     @Published var pickupTime: String?
     @Published var dropOfTime: String?
     private let searchCompleter = MKLocalSearchCompleter()
@@ -37,6 +38,9 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     }
     func setLocation(location: TaxiLocation) {
         self.selectedTaxiLocation = location
+    }
+    func setSelectedLocation(location: TaxiLocation) {
+        self.selectedLocation = location
     }
     func locationSearch(forLocalSearchCompletion localSearch: MKLocalSearchCompletion, completion: @escaping MKLocalSearch.CompletionHandler){
         let searchRequest = MKLocalSearch.Request()
